@@ -8,7 +8,7 @@
 
 <p align="left">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Merchant-Of-Record-Mor/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Merchant-Of-Record-Mor?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Merchant-Of-Record-Mor/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Merchant-Of-Record-Mor?style=social" alt="GitHub_Stars" /></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -73,7 +73,7 @@ The sector displays a **moderately fragmented and evolving structure**: while en
 
 *Sorted by GitHub Stargazers count (descending).*
 
-| Project | Stars | License | Tech Stack | Architecture & Description |
+| Project | GitHub_Stars | License | Tech Stack | Architecture & Description |
 | :--- | :---: | :---: | :---: | :--- |
 | **[Juspay / Hyperswitch](https://github.com/juspay/hyperswitch)** ⚡ | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | Apache-2.0 | Rust 🦀 | High-performance open-source payments switch and routing orchestration platform connecting 50+ payment gateways, smart fraud routing, and global payout channels. |
 | **[Lago](https://github.com/getlago/lago)** 🌊 | [![Stars](https://img.shields.io/github/stars/getlago/lago?style=social&color=white)](https://github.com/getlago/lago/stargazers) | AGPL-3.0 | Ruby 💎 / Go 🐹 | Open-source metering and usage-based subscription billing engine; coordinates hybrid pricing models, credit wallets, invoicing, and tax integrations. |

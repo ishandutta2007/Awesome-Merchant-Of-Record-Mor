@@ -1,189 +1,124 @@
-# Awesome-Merchant-Of-Record-Mor
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Merchant of Record (MoR) Platforms and Open-Source Ecosystem Banner" width="100%" />
+</p>
 
-## Top Merchant of Record (MoR) Ecosystem
+# Awesome Merchant of Record (MoR) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+> A curated directory of top **Merchant of Record (MoR)** SaaS platforms, payment infrastructure, and open-source MoR alternatives for software creators, digital goods, and SaaS founders.
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Global Tax Compliance, Payment Infrastructure & Self-Hosted MoR Alternatives*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Merchant of Record (MoR)** services. These platforms act as the legal seller of your software or digital products, handling global sales tax, VAT, payment processing, invoicing, and compliance—so you can focus on building instead of navigating 140+ countries' tax regimes.
-
-
-
-**Examples** include Shopify Markets Pro, Global-e, Digital River, Paddle, FastSpring, Nexway, Cleverbridge, 2Checkout (Verifone), MerchantSpring, and PayPro Global (the category leaders).
-
-
-
-**Open-source emphasis**: Merchant of Record is a domain where open-source tooling is **exceptionally rare but has a clear leader**. **Polar** is the only mature open-source MoR platform available—an Apache-2.0 licensed engine that explicitly handles the MoR responsibilities of billing, receipts, customer accounts, sales tax, and VAT, with 7,400+ GitHub stars and active development . **Creem** maintains open-source SDKs and integrations for its commercial MoR service, but the core platform is not open-source . **Blooms** is an early-stage MIT-licensed attempt at a LemonSqueezy/Paddle alternative, but it is incomplete and not production-ready . No other open-source project replicates the full legal and tax infrastructure of Paddle or FastSpring—MoR status requires banking relationships, tax registrations, and regulatory compliance that software alone cannot provide.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Shopify Markets Pro](https://www.shopify.com/markets)**  
-
-  Shopify's merchant-of-record solution for cross-border selling; handles international tax compliance, duties, and fraud prevention for merchants selling globally.
-
-
-
-- **[Global-e](https://www.global-e.com/)**  
-
-  Cross-border ecommerce platform acting as merchant of record for international sales; handles localization, tax, duties, and payment methods across 200+ markets.
-
-
-
-- **[Digital River](https://www.digitalriver.com/)**  
-
-  Global commerce and merchant of record provider for software, digital products, and subscriptions; handles tax, compliance, fraud, and payments across 240+ countries.
-
-
-
-- **[Paddle](https://www.paddle.com/)**  
-
-  Merchant of record for SaaS and digital products; handles global sales tax, VAT, subscription billing, and compliance; widely used by indie developers and SaaS companies.
-
-
-
-- **[FastSpring](https://fastspring.com/)**  
-
-  Merchant of record and ecommerce platform for software and SaaS; handles global tax, payments, subscriptions, and compliance; enterprise-focused with popup/embedded checkout .
-
-
-
-- **[Nexway](https://www.nexway.com/)**  
-
-  Merchant of record and digital commerce platform for software, games, and digital goods; handles global tax and payment processing.
-
-
-
-- **[Cleverbridge](https://www.cleverbridge.com/)**  
-
-  Merchant of record and ecommerce platform for software, SaaS, and digital goods; handles global tax, compliance, and subscription management.
-
-
-
-- **[2Checkout (Verifone)](https://www.2checkout.com/)**  
-
-  Merchant of record and payment platform (now Verifone) for digital goods and SaaS; handles global tax and compliance.
-
-
-
-- **[MerchantSpring](https://www.merchantspring.com/)**  
-
-  Merchant of record platform focused on simplifying global sales tax and compliance for digital businesses.
-
-
-
-- **[PayPro Global](https://www.payproglobal.com/)**  
-
-  Merchant of record and ecommerce platform for software and digital products; handles global tax, payments, and compliance.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### MoR Platforms (Self-Hosted)
-
-
-
-- **[Polar](https://github.com/polarsource/polar)**  
-
-  The only mature open-source **Merchant of Record** platform available (Apache 2.0, 7,401+ GitHub stars); explicitly designed as "an open source engine for your digital products" that handles the MoR responsibilities: **billing, receipts, customer accounts, sales tax, and VAT** . Features subscriptions, digital products, license keys, GitHub repository access, Discord support channel access, and file downloads. Pricing is 4% + 40¢ with no fixed monthly costs. Stack: Python/FastAPI backend, Next.js dashboard, PostgreSQL, Redis. **The clear starting point for organizations wanting a self-hosted MoR engine**—though it is a newer entrant compared to Paddle or FastSpring, and organizations must still handle the legal/tax registrations that underpin MoR status.
-
-
-
-### MoR-Adjacent Projects (SDKs & Integrations)
-
-
-
-- **[Creem SDKs](https://github.com/armitage-labs/creem)**  
-
-  Open-source TypeScript SDKs and integrations for **Creem**, a commercial MoR service (not open-source itself). Packages include `creem` (full API coverage with MCP server), `creem_io` (lightweight wrapper), `@creem_io/nextjs`, `@creem_io/better-auth`, and `@creem_io/convex` . **Useful for developers integrating with Creem's MoR service**, but the core platform is proprietary.
-
-
-
-- **[Blooms](https://github.com/im-Kazmi/Blooms-)**  
-
-  Early-stage open-source attempt at a LemonSqueezy/Paddle alternative (MIT); features digital product sales, subscription management, license key generation, multi-currency support, and Stripe payment processing . Stack: Hono.js, Next.js, PostgreSQL, Prisma. **Not production-ready**—last pushed January 2025, SDK incomplete, and no community traction. Listed for completeness but **not recommended for production use**.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **No other open-source MoR exists** — The legal and tax infrastructure of MoR platforms (tax registrations in 100+ jurisdictions, banking relationships, fraud liability) is not replicable by software alone. Polar is the only viable open-source starting point , and even it requires the operator to establish the underlying legal entity and tax registrations.
-
-- **Tax calculation engines** (Cbox Tax, nexus-tax) and **billing engines** (Recurso) provide adjacent capabilities but do not confer MoR status—they calculate or manage billing without acting as the legal seller .
-
-
-
-**Frameworks for building custom systems**: **Polar** is the only open-source MoR engine that explicitly handles tax, billing, and customer accounts as a merchant of record . For organizations not ready to establish MoR status, **Recurso** provides billing and ledger infrastructure with tax calculation (India GST, EU VAT, US sales tax) but requires the operator to handle compliance . **Creem's SDKs** are useful if using their commercial MoR service . No open-source project replaces the legal entity and tax registration layer that defines a true MoR.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Merchant of Record platforms bear legal liability for tax collection and remittance; **self-hosting a MoR engine like Polar does not automatically confer MoR status**—the operator must establish the legal entity, tax registrations, and banking relationships required to act as merchant of record. Consult legal and tax advisors before assuming MoR responsibilities.
-
-- **Open-source MoR is extremely limited**—Polar is the only mature option , and it is a newer entrant compared to established commercial MoRs like Paddle, FastSpring, or Digital River. Blooms is incomplete and not production-ready . Organizations requiring MoR services without the legal overhead should evaluate commercial platforms.
-
-- Verify license terms for commercial use; Polar uses Apache 2.0 , and Creem's SDKs are open-source while the core service is proprietary .
-
-
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Merchant-Of-Record-Mor?style=social)](https://github.com/ishandutta2007/Awesome-Merchant-Of-Record-Mor/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ---
 
+## What is a Merchant of Record (MoR)?
 
+A **Merchant of Record (MoR)** is the legal entity authorized and held liable by financial institutions and governments to process a customer's credit or debit card transaction and act as the legal seller of software, SaaS, or digital goods.
 
-**Made for SaaS founders, digital product sellers, payment engineers, and global commerce operators.**  
+Unlike standard payment gateways (such as Stripe, PayPal, or Adyen) where the vendor remains legally responsible for global tax remittance, consumer compliance, and financial liability, a **Merchant of Record handles:**
+- **Global Indirect Tax Compliance**: Automatic calculation, collection, and filing of Sales Tax, VAT, and GST across 140+ countries and state jurisdictions.
+- **Financial & Regulatory Liability**: Full chargeback administration, fraud prevention guarantees, PCI-DSS compliance, and foreign exchange exposure.
+- **Localized Global Checkout**: Supporting 30+ regional currencies and hyper-local payment rails (e.g., Pix, iDEAL, SEPA, UPI, Alipay).
+- **Invoicing & Digital Receipts**: Issuing audit-proof B2B and B2C tax invoices in accordance with local regulations.
 
-Let's make merchant of record infrastructure more open, but with clear eyes about the legal and tax registrations that software cannot replace.
+---
+
+## Sector Overview & Market Dynamics
+
+The global market for Merchant of Record (MoR) and digital cross-border tax compliance services is estimated between **$4.8 billion and $12.6 billion in 2025–2026**, projected to surge past **$25 billion to $38+ billion by 2032** at a Compound Annual Growth Rate (CAGR) of approximately **12% to 14.8%**.
+
+The sector displays a **moderately fragmented and evolving structure**: while enterprise cross-border commerce and underlying merchant acquiring remain concentrated around a handful of multi-billion dollar payment leaders and public players (such as Shopify Managed Markets and Global-e), the SaaS, indie developer, and creator monetization layer features diverse, specialized competition (including Lemon Squeezy, Paddle, FastSpring, PayPro Global, and Polar). As global digital tax enforcement tightens worldwide, pure-play MoRs continue to experience strong secular tailwinds.
+
+---
+
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS Merchant of Record Platforms](#saas-merchant-of-record-platforms)
+- [Open-Source MoR & Billing Infrastructure](#open-source-mor--billing-infrastructure)
+- [MoR vs Traditional Payment Gateway Comparison](#mor-vs-traditional-payment-gateway-comparison)
+- [How to Choose an MoR](#how-to-choose-an-mor)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Tax Liability Notice](#disclaimer--tax-liability-notice)
+
+---
+
+## SaaS Merchant of Record Platforms
+
+*Sorted by company scale (valuation / annual revenue, descending).*
+
+| Platform | Valuation / Revenue | Starting Pricing Tier | Free Tier / Trial Limit | Key Focus & Specialties |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Shopify Markets Pro](https://www.shopify.com/markets)** | **~$100B+ Market Cap** (Shopify Inc. NYSE: SHOP; ~$7B+ rev) | **3.5% + domestic processing fee** for Basic/Grow/Advanced plans (3.25% on Shopify Plus) + 1.5%–2% FX fee | **3-day free trial** + promotional $1/month for first month; requires an active Shopify merchant subscription | Cross-border physical and digital commerce; handles international customs, duties, global tax remittance, and DHL Express shipping across 150+ countries. |
+| **[Global-e](https://www.global-e.com/)** | **~$6.95B Market Cap** (NASDAQ: GLBE; ~$1.11B TTM rev) | **Custom % commission fee** based on international GMV tiers (typically 4.5%–6.5% + transaction fees) | **No self-serve free trial**; requires enterprise demo and custom qualification evaluation | End-to-end enterprise cross-border MoR for major multi-brand DTC retailers; handles localization, duty calculation, local returns, and 100+ local currencies. |
+| **[2Checkout (Verifone)](https://www.2checkout.com/)** | **~$3.4B Acquisition Valuation** by Francisco Partners / Verifone | **6.0% + $0.60** per sale on 2Monetize (MoR tier); (2Sell gateway starts at 3.5% + $0.35) | **No self-serve free plan**; test sandbox environment provided; supports configuring up to **30-day free trials** for end customer subscriptions | Global digital goods, downloadable software, and software licenses; automatic VAT compliance across 200+ countries with built-in affiliate network. |
+| **[Paddle](https://www.paddle.com/)** | **~$1.4B Valuation** ($200M Series D; ~$60M+ ARR) | **5% + $0.50** per successful checkout transaction on standard pay-as-you-go | **Free forever account signup** with zero monthly maintenance fee; test sandbox included; full developer API access until first live sale | MoR designed specifically for B2B and B2C SaaS; includes subscription billing, dunning management, tax collection, and ProfitWell revenue metrics. |
+| **[Lemon Squeezy](https://www.lemonsqueezy.com/)** | **Acquired by Stripe (2024)** (~$20M+ est. valuation / $5M–$10M ARR) | **5% + $0.50** per successful transaction (+1.5% for international cards, +0.5% for recurring subscriptions) | **Free forever account** ($0/month subscription); access to full checkout features; free email marketing up to **500 subscribers** | Developer-first MoR for indie hackers, SaaS products, digital downloads, and software license keys; sleek hosted checkout and customer portal. |
+| **[FastSpring](https://fastspring.com/)** | **~$400M–$500M Est. Valuation** (Accel-KKR backed; ~$50M+ ARR) | **8.9% flat rate** per transaction (or volume-based custom starting at 5.9% + $0.95) | **14-day full-featured sandbox/free trial** with test transactions; no upfront credit card required | Enterprise software and SaaS platform with popup and embedded checkouts, localized billing, and interactive quoting for B2B deals. |
+| **[Nexway](https://www.nexway.com/)** | **~$40M Annual Revenue** (€200M+ processed GMV) | **Custom % revenue share** (volume-based quote, typically 5.5%–8% for digital publishers) | **No free tier**; custom sandbox and assisted onboarding provided via sales consultation | Digital video games, software distribution, and publisher monetization with global fraud management and regional checkout pages. |
+| **[Cleverbridge](https://www.cleverbridge.com/)** | **~$35M–$42M Annual Revenue** ($10B+ cumulative processed GMV) | **Custom % revenue share** per transaction based on projected annual gross merchandise value (GMV) | **No self-serve free trial**; sandbox environment provisioned upon enterprise sales consultation and contract review | Mid-market and enterprise B2B SaaS and consumer software; customer renewal engine, dunning management, and compliance across 240+ countries. |
+| **[PayPro Global](https://www.payproglobal.com/)** | **~$9.4M Annual Revenue** (Bootstrapped profitable category provider) | **4.9% + $1.00** per transaction (or 7.9% flat depending on risk profile and product type) | **No recurring monthly fees**; free developer account and testing environment available before contract signing | Software, SaaS, and digital goods MoR with 24/7 localized customer purchase support, fraud detection, and multi-currency billing. |
+| **[MerchantSpring](https://www.merchantspring.com/)** | **~$3M–$5M Est. Revenue** (Fast-growing e-commerce tooling provider) | **$31/month** (Brand entry plan, billed annually) up to $399+/month for multi-store agencies | **14-day free trial** with full access to connect up to 5 marketplace stores; no credit card required | Multi-channel marketplace analytics, store management, and unified fee/tax reconciliation across Amazon, Shopify, and Walmart. |
+
+---
+
+## Open-Source MoR & Billing Infrastructure
+
+*Sorted by GitHub Stargazers count (descending).*
+
+| Project | Stars | License | Tech Stack | Architecture & Description |
+| :--- | :---: | :---: | :---: | :--- |
+| **[Juspay / Hyperswitch](https://github.com/juspay/hyperswitch)** | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | Apache-2.0 | Rust | High-performance open-source payments switch and routing orchestration platform connecting 50+ payment gateways, smart fraud routing, and global payout channels. |
+| **[Lago](https://github.com/getlago/lago)** | [![Stars](https://img.shields.io/github/stars/getlago/lago?style=social&color=white)](https://github.com/getlago/lago/stargazers) | AGPL-3.0 | Ruby / Go | Open-source metering and usage-based subscription billing engine; coordinates hybrid pricing models, credit wallets, invoicing, and tax integrations. |
+| **[Polar](https://github.com/polarsource/polar)** | [![Stars](https://img.shields.io/github/stars/polarsource/polar?style=social&color=white)](https://github.com/polarsource/polar/stargazers) | Apache-2.0 | Python (FastAPI) / Next.js | **The leading open-source MoR platform**. Manages customer accounts, sales tax, EU VAT remittance, digital product downloads, SaaS subscriptions, and GitHub/Discord benefit granting. |
+| **[Kill Bill](https://github.com/killbill/killbill)** | [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers) | Apache-2.0 | Java | Mature, enterprise-grade open-source subscription billing and payments engine with plugin architecture for payment gateways, tax calculation engines, and invoice generation. |
+| **[OpenMeter](https://github.com/openmeterio/openmeter)** | [![Stars](https://img.shields.io/github/stars/openmeterio/openmeter?style=social&color=white)](https://github.com/openmeterio/openmeter/stargazers) | Apache-2.0 | Go | Real-time usage-based metering and billing infrastructure for AI agents, APIs, and cloud services; processes high-throughput token and event streams for revenue tracking. |
+| **[Tier](https://github.com/tierrun/tier)** | [![Stars](https://img.shields.io/github/stars/tierrun/tier?style=social&color=white)](https://github.com/tierrun/tier/stargazers) | BSD-3-Clause | Go | Lightweight pricing and metering engine that synchronizes pricing models, tiers, and SaaS features directly with Stripe billing. |
+| **[Creem SDKs](https://github.com/armitage-labs/creem)** | [![Stars](https://img.shields.io/github/stars/armitage-labs/creem?style=social&color=white)](https://github.com/armitage-labs/creem/stargazers) | MIT | TypeScript | Open-source developer SDKs, authentication bridges (Better-Auth, Next.js, Convex), and MCP (Model Context Protocol) server for Creem's MoR billing services. |
+| **[Blooms](https://github.com/im-Kazmi/Blooms-)** | [![Stars](https://img.shields.io/github/stars/im-Kazmi/Blooms-?style=social&color=white)](https://github.com/im-Kazmi/Blooms-/stargazers) | MIT | Hono.js / Next.js / Prisma | Open-source self-hosted Lemon Squeezy and Paddle alternative prototype; digital checkout, license key issuance, and multi-currency billing over Stripe. |
+| **[Payment Platform for Marketplaces](https://github.com/dcaglar/payment-platform-for-marketplaces)** | [![Stars](https://img.shields.io/github/stars/dcaglar/payment-platform-for-marketplaces?style=social&color=white)](https://github.com/dcaglar/payment-platform-for-marketplaces/stargazers) | MIT | TypeScript / Node.js | Reference architecture demonstrating merchant of record payment flow orchestration, sub-merchant onboarding, ledgering, and marketplace payout handling. |
+| **[Starfish](https://github.com/makestarfish/starfish)** | [![Stars](https://img.shields.io/github/stars/makestarfish/starfish?style=social&color=white)](https://github.com/makestarfish/starfish/stargazers) | Apache-2.0 | Rust | Minimalist open-source Merchant of Record service written in Rust for developers building lightweight sovereign software checkout pipelines. |
+
+---
+
+## MoR vs Traditional Payment Gateway Comparison
+
+| Feature / Responsibility | Traditional Payment Gateway (e.g. Stripe, Braintree) | Merchant of Record (e.g. Paddle, Polar, Lemon Squeezy) |
+| :--- | :---: | :---: |
+| **Legal Seller on Invoice** | Your Company | The MoR Provider |
+| **Global Sales Tax / VAT Filing** | ❌ Merchant must register & file in every jurisdiction | ✅ Fully automated and filed under MoR's corporate entities |
+| **Chargeback Liability & Defense** | ❌ Merchant absorbs fee + loss | ✅ MoR absorbs or handles automated dispute representation |
+| **Foreign Exchange (FX) Conversion** | ❌ Merchant bears currency fluctuation risk | ✅ Handled at checkout across 30+ native currencies |
+| **PCI-DSS Compliance Scope** | Partial (SAQ-A or higher required) | Minimal (hosted under MoR umbrella) |
+| **Local Payment Methods** | Manual activation per country | Native pre-configured checkout rails |
+| **Typical Transaction Cost** | 2.9% + $0.30 + tax tooling fees | 4.0% – 5.5% + $0.40–$0.50 (all compliance included) |
+
+---
+
+## How to Choose an MoR
+
+When evaluating whether to adopt a commercial MoR or an open-source engine:
+
+1. **Transaction Velocity & Geography**: If more than 30% of your buyers reside across the EU, UK, Canada, Australia, and multiple US states, economic nexus thresholds make manual indirect tax filings prohibitively expensive. An MoR pays for itself in compliance accounting savings.
+2. **Product Type**: For digital assets, software licenses, or subscription SaaS, tools like **Paddle**, **Lemon Squeezy**, or **Polar** provide out-of-the-box key generation, customer billing portals, and dunning workflows.
+3. **Open-Source Self-Hosting Considerations**: While platforms like **Polar** open-source their billing engines and digital checkout logic, acting as an MoR requires registering tax entities with regulatory bodies worldwide. Software alone cannot replace banking and legal jurisdictions.
+
+---
+
+## How to Contribute
+
+Contributions, updates, and corrections are always welcome!
+
+1. Fork this repository.
+2. Create a feature branch (`git checkout -b feat/add-mor-tool`).
+3. Add or update entries with factual pricing, free tier information, and proper links.
+4. Open a descriptive Pull Request.
+
+Please review existing tables to keep descriptions clear, concise, and non-promotional.
+
+---
+
+## Disclaimer & Tax Liability Notice
+
+*This repository is a community-curated educational and developer resource. It does not constitute legal, financial, or tax advice. Merchant of Record status involves formal legal reseller liability, bank sponsorship, and local indirect tax filings. Consult a licensed tax advisor or legal counsel when architecting cross-border payment operations.*

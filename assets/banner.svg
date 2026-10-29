@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius: 12px; overflow: hidden;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.65" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(25px, -15px); opacity: 0.6; }
+    }
+    @keyframes floatPill1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes floatPill2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(7px); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes beaconPulse {
+      0% { r: 4px; opacity: 1; }
+      100% { r: 16px; opacity: 0; }
+    }
+    .orb-glow { animation: pulseOrb 8s ease-in-out infinite alternate; transform-origin: center; }
+    .float-card-1 { animation: floatPill1 5s ease-in-out infinite; }
+    .float-card-2 { animation: floatPill2 6s ease-in-out infinite; }
+    .flowing-dash { stroke-dasharray: 8 6; animation: flowLine 20s linear infinite; }
+    .beacon { animation: beaconPulse 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+
+  <!-- Subtle Tech Grid -->
+  <g opacity="0.08" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Glowing Mesh Spheres (Background Layer) -->
+  <g>
+    <circle class="orb-glow" cx="150" cy="80" r="140" fill="#38bdf8" filter="url(#glow)" opacity="0.25" />
+    <circle class="orb-glow" cx="1020" cy="270" r="160" fill="#6366f1" filter="url(#glow)" opacity="0.3" />
+    <circle class="orb-glow" cx="900" cy="80" r="110" fill="#ec4899" filter="url(#glow)" opacity="0.2" />
+  </g>
+
+  <!-- Animated Dynamic Connecting Flow Lines (Behind text, around cards) -->
+  <g fill="none" opacity="0.35">
+    <path class="flowing-dash" d="M 680,240 C 780,240 820,130 940,130" stroke="#38bdf8" stroke-width="2" />
+    <path class="flowing-dash" d="M 720,290 C 840,290 890,200 1010,200" stroke="#818cf8" stroke-width="2" />
+    <path class="flowing-dash" d="M 120,310 C 260,310 320,340 450,340" stroke="#6366f1" stroke-width="1.5" />
+  </g>
+
+  <!-- Dynamic Floating Decorative Cards (Positioned safely to right, never obscuring text) -->
+  <g class="float-card-1" filter="url(#card-shadow)">
+    <!-- MoR Compliance Feature Card -->
+    <rect x="850" y="55" width="280" height="90" rx="14" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+    <rect x="865" y="70" width="36" height="36" rx="8" fill="#0284c7" fill-opacity="0.2" />
+    <text x="883" y="93" fill="#38bdf8" font-size="18" text-anchor="middle">⚖️</text>
+    <text x="915" y="84" fill="#f8fafc" font-size="14" font-weight="600">Global Tax &amp; VAT</text>
+    <text x="915" y="103" fill="#94a3b8" font-size="12">140+ Jurisdictions Remitted</text>
+    <circle cx="1100" cy="75" r="4" fill="#10b981" />
+    <circle class="beacon" cx="1100" cy="75" r="4" stroke="#10b981" stroke-width="1.5" fill="none" />
+    <rect x="865" y="118" width="180" height="5" rx="2.5" fill="#1e293b" />
+    <rect x="865" y="118" width="145" height="5" rx="2.5" fill="url(#primary-grad)" />
+    <text x="1080" y="124" fill="#64748b" font-size="10" font-weight="600">99.8%</text>
+  </g>
+
+  <g class="float-card-2" filter="url(#card-shadow)">
+    <!-- Multi-Currency Checkout Card -->
+    <rect x="800" y="180" width="310" height="98" rx="14" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+    <rect x="815" y="198" width="38" height="38" rx="8" fill="#4f46e5" fill-opacity="0.2" />
+    <text x="834" y="223" fill="#818cf8" font-size="18" text-anchor="middle">💳</text>
+    <text x="866" y="213" fill="#f8fafc" font-size="14" font-weight="600">Merchant of Record</text>
+    <text x="866" y="231" fill="#94a3b8" font-size="12">Legal Reseller • Zero Liability</text>
+    <g transform="translate(866, 244)">
+      <rect x="0" y="0" width="55" height="18" rx="9" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="27" y="13" fill="#38bdf8" font-size="9.5" text-anchor="middle" font-weight="bold">SaaS</text>
+      <rect x="63" y="0" width="65" height="18" rx="9" fill="#0f172a" stroke="#818cf8" stroke-width="0.8" />
+      <text x="95" y="13" fill="#a5b4fc" font-size="9.5" text-anchor="middle" font-weight="bold">Billing</text>
+      <rect x="136" y="0" width="85" height="18" rx="9" fill="#0f172a" stroke="#ec4899" stroke-width="0.8" />
+      <text x="178" y="13" fill="#f472b6" font-size="9.5" text-anchor="middle" font-weight="bold">Compliance</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND: Hero Title and Subtitles (High contrast, 100% visible) -->
+  <g transform="translate(70, 75)">
+    <!-- Pill Badge -->
+    <g>
+      <rect x="0" y="0" width="265" height="28" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+      <circle cx="14" cy="14" r="4.5" fill="#38bdf8" />
+      <circle class="beacon" cx="14" cy="14" r="4.5" stroke="#38bdf8" stroke-width="1.5" fill="none" />
+      <text x="27" y="18" fill="#bae6fd" font-size="11.5" font-weight="700" letter-spacing="0.5">CURATED ECOSYSTEM DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="80" fill="url(#primary-grad)" font-size="44" font-weight="800" letter-spacing="-1">
+      Awesome Merchant Of Record
+    </text>
+    <text x="0" y="124" fill="#ffffff" font-size="28" font-weight="700" letter-spacing="-0.5">
+      (MoR) Platforms &amp; Open Source
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="165" fill="#94a3b8" font-size="15" font-weight="400">
+      Global indirect tax compliance (VAT, GST, Sales Tax), payment infrastructure,
+    </text>
+    <text x="0" y="188" fill="#94a3b8" font-size="15" font-weight="400">
+      fraud indemnity, localized multi-currency checkout, and self-hosted MoR engines.
+    </text>
+
+    <!-- Tech Spec Tags in Foreground -->
+    <g transform="translate(0, 218)">
+      <g>
+        <rect x="0" y="0" width="95" height="24" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+        <text x="47" y="16" fill="#cbd5e1" font-size="11" font-weight="600" text-anchor="middle">SaaS MoR</text>
+      </g>
+      <g transform="translate(105, 0)">
+        <rect x="0" y="0" width="125" height="24" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+        <text x="62" y="16" fill="#cbd5e1" font-size="11" font-weight="600" text-anchor="middle">Open-Source Engines</text>
+      </g>
+      <g transform="translate(240, 0)">
+        <rect x="0" y="0" width="115" height="24" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+        <text x="57" y="16" fill="#cbd5e1" font-size="11" font-weight="600" text-anchor="middle">Global Tax &amp; VAT</text>
+      </g>
+      <g transform="translate(365, 0)">
+        <rect x="0" y="0" width="120" height="24" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+        <text x="60" y="16" fill="#cbd5e1" font-size="11" font-weight="600" text-anchor="middle">Payment Gateways</text>
+      </g>
+    </g>
+  </g>
+</svg>
